@@ -1,0 +1,83 @@
+.container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: #e2d89d67;
+    animation-name: container-rotate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.ball {
+    position: absolute;
+    top: 0px;
+    left: 75px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation-name: ball-rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.red {
+    background-color: red;
+    animation-delay: 1s;
+}
+.green {
+    background-color: green;
+    animation-delay: 2s;
+}
+.blue {
+    background-color: blue;
+    animation-delay: 3s;
+}
+@keyframes ball-rotate {
+    0% {
+        top: 0px;
+        left: 75px;
+    }
+    25% {
+        top: 75px;
+        left: 0px;
+    }
+    50% {
+        top: 150px;
+        left: 75px;
+    }
+    75% {
+        top: 75px;
+        left: 150px;
+    }
+    100% {
+        top: 0px;
+        left: 75px;
+    }
+}
+@keyframes container-rotate {
+    0% {
+        top: 0px;
+        left: 75px;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 75px;
+        left: 0px;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 150px;
+        left: 75px;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 75px;
+        left: 150px;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 0px;
+        left: 75px;
+        transform: rotate(360deg);
+    }
+}
